@@ -3,7 +3,7 @@ $(document).ready(function(){
 
     $("#form").submit(function(event){
         event.preventDefault()
-        alert("form is submitted)
+        alert("form is submitted")
 
         var search = $("#search").val()
         videoSearch(API_KEY, search, 10)

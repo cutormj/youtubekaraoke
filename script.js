@@ -16,14 +16,8 @@ $(document).ready(function(){
             console.log(data)
             data.items.forEach(item => {
                 video = `
-                <tr>
-                <td>
-                <a target="_blank" href="https://www.youtube.com/watch?v=${item.id.videoId}">
-                ${item.snippet.title}</td>
-            
-                </tr>
-
-                `
+                    <iframe width="420" heights="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0"
+allowfullscreen></iframe>                `
                 $("#videos").append(video)
             });
         })

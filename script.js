@@ -4,7 +4,7 @@ $(document).ready(function(){
 
     $("#form").submit(function(event){
         event.preventDefault()
-
+        alert("I love you Pisnge!")
         var search = $("#search").val()
         videoSearch(API_KEY, search, 10)
     })

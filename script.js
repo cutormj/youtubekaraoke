@@ -12,7 +12,7 @@ $(document).ready(function(){
     function videoSearch(key, search, maxResults){
 
         $.get("https://www.googleapis.com/youtube/v3/search?key="+ key 
-        + "&type=video&part=snippet&maxResults=" + maxResults + "$q=" + search, function(data){
+        + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + search, function(data){
             console.log(data)
         })
 

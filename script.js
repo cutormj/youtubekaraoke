@@ -120,9 +120,7 @@ $(document).ready(function () {
       $("#table").show();
   
       data.items.forEach((item) => {
-        videoData = `
-                      
-                      <tr>
+        videoData = "<tr>
                       <td>
                       <a target="_blank" href="https://www.youtube.com/watch?v=${item.id.videoId}">
                       ${item.snippet.title}</td>
@@ -132,9 +130,7 @@ $(document).ready(function () {
                       <td>
                       <a target="_blank" href="https://www.youtube.com/channel/${item.snippet.channelId}">${item.snippet.channelTitle}</a>
                       </td>
-                      </tr>
-  
-                      `;
+                      </tr>";
   
         $("#results").append(videoData);
       });

@@ -1,8 +1,9 @@
 $(document).ready(function(){
     var API_KEY = "AIzaSyBpIgocvh7ibNAbC0i8D1-K2Zhuj9TyjfU"
 
-    $("form").submit(function(event){
+    $("#form").submit(function(event){
         event.preventDefault()
+        alert("form is submitted)
 
         var search = $("#search").val()
         videoSearch(API_KEY, search, 10)

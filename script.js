@@ -48,7 +48,7 @@ $(document).ready(function () {
   
       console.log(beforedate);
   
-      API_KEY = "######YOURAPIKEY############";
+      API_KEY = "AIzaSyBpIgocvh7ibNAbC0i8D1-K2Zhuj9TyjfU";
   
       var url = `https://www.googleapis.com/youtube/v3/search?key=${API_KEY}
           &part=snippet&q=${search}&maxResults=${maxResults}&publishedAfter=${afterdate}&publishedBefore=${beforedate}&order=${order}&videoDuration=${duration}&type=video`;

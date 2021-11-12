@@ -9,7 +9,7 @@ $(document).ready(function(){
     })
 
     function saveToQueue(){
-        alert("Hello World");
+        alert("Hello world");
     }
 
     function videoSearch(key, search, maxResults){
@@ -20,9 +20,9 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a id="song" onclick="saveToQueue()" href="#">
+                    <a href="#">
                     ${item.snippet.title}
-                    </a>
+                    </a><button onclick="saveToQueue()">Send to Queue</button>
                     </li>
                     `
                 $("#videos").append(video)

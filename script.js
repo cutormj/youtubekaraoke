@@ -38,7 +38,7 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a id="song" onclick="saveToQueue" href="${item.id.videoId}">
+                    <a id="song" onclick="saveToQueue()" href="${item.id.videoId}">
                     ${item.snippet.title}
                     </a>
                     </li>

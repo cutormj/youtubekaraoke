@@ -18,7 +18,7 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a href="https://cutormj.github.io/youtubekaraoke/support.php?songId=${item.id.videoId}">
+                    <a href="https://cutormj.github.io/youtubekaraoke/index.html?songId=${item.id.videoId}">
                     ${item.snippet.title}
                     </a>
                     </li>

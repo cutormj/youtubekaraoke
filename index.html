@@ -1,5 +1,13 @@
 <html>
     <body>
-        
+        <script>
+            fs = require('fs');
+            var name = 'queue.json';
+            var m = JSON.parse(fs.readFileSync(name).toString);
+            m.forEach(function(p){
+                p.name = m.name;
+            });
+            console.log(m);
+        </script>
     </body>
 </html>

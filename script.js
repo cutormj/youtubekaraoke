@@ -16,8 +16,8 @@ $(document).ready(function(){
             console.log(data)
             data.items.forEach(item => {
                 video = `
-                    <iframe width="420" heights="315" src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0"
-allowfullscreen></iframe>                `
+                    <il><href src="${item.id.videoId}">${item.id.videoId}</il>
+                    `
                 $("#videos").append(video)
             });
         })

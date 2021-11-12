@@ -15,7 +15,7 @@ $(document).ready(function(){
             console.log(data)
             data.items.forEach(item => {
                 video = `
-                    <il><a href="${item.id.videoId}">${item.id.videoId}</a></il>
+                    <li><a href="${item.id.videoId}">${item.id.videoId}</a></li>
                     `
                 $("#videos").append(video)
             });

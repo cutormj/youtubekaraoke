@@ -8,9 +8,6 @@ $(document).ready(function(){
         videoSearch(API_KEY, search, 10)
     })
 
-    function saveToQueue(){
-        alert("Hello world");
-    }
 
     function videoSearch(key, search, maxResults){
 
@@ -29,5 +26,9 @@ $(document).ready(function(){
             });
         })
 
+    }
+    
+    function saveToQueue(){
+        alert("Hello world");
     }
 })

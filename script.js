@@ -8,6 +8,28 @@ $(document).ready(function(){
         videoSearch(API_KEY, search, 10)
     })
 
+    function saveToQueue(){
+        temp_song_id = document.getElementById("song").val;
+
+        const song = {
+            song_id = temp_song_id,
+        };
+
+        fetch('index.php', {
+            method: 'post',
+            body: JSON.stringify(song),
+            headers: {
+                'Content-Type' : 'application/json'
+            }
+        }).then(function(response){
+            return response.text();
+        }).then(function (text){
+            console.log(text);
+        }).catch(function(error){
+            console.error(error);
+        })
+    }
+
     function videoSearch(key, search, maxResults){
 
         $.get("https://www.googleapis.com/youtube/v3/search?key="+ key 
@@ -15,7 +37,11 @@ $(document).ready(function(){
             console.log(data)
             data.items.forEach(item => {
                 video = `
-                    <li><a href="${item.id.videoId}">${item.snippet.title}</a></li>
+                    <li>
+                    <a id="song" onclick="saveToQueue" href="${item.id.videoId}">
+                    ${item.snippet.title}
+                    </a>
+                    </li>
                     `
                 $("#videos").append(video)
             });

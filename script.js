@@ -9,6 +9,10 @@ $(document).ready(function(){
     })
 
 
+    function saveToQueue(){
+        document.getElementById("btn").innerHTML = Date();
+    }
+
     function videoSearch(key, search, maxResults){
 
         $.get("https://www.googleapis.com/youtube/v3/search?key="+ key 
@@ -19,7 +23,7 @@ $(document).ready(function(){
                     <li>
                     <a href="#">
                     ${item.snippet.title}
-                    </a>
+                    </a><button id="btn" onclick="saveToQueue()">Send to Queue</button>
                     </li>
                     `
                 $("#videos").append(video)
@@ -28,7 +32,4 @@ $(document).ready(function(){
 
     }
     
-    function saveToQueue(){
-        alert("Hello world");
-    }
 })

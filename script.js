@@ -9,9 +9,6 @@ $(document).ready(function(){
     })
 
 
-    function saveToQueue(){
-        document.getElementById("btn").innerHTML = Date();
-    }
 
     function videoSearch(key, search, maxResults){
 
@@ -21,9 +18,9 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a href="#">
+                    <a href="https://cutormj.github.io/youtubekaraoke/songId=${item.id.videoId}">
                     ${item.snippet.title}
-                    </a><button id="btn" onclick="saveToQueue()">Send to Queue</button>
+                    </a>
                     </li>
                     `
                 $("#videos").append(video)

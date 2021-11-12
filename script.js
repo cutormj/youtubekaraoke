@@ -9,25 +9,7 @@ $(document).ready(function(){
     })
 
     function saveToQueue(){
-        temp_song_id = document.getElementById("song").val();
-
-        const song = {
-            song_id = temp_song_id,
-        };
-
-        fetch('index.php', {
-            method: 'post',
-            body: JSON.stringify(song),
-            headers: {
-                'Content-Type' : 'application/json'
-            }
-        }).then(function(response){
-            return response.text();
-        }).then(function (text){
-            console.log(text);
-        }).catch(function(error){
-            console.error(error);
-        })
+        alert("Hello World");
     }
 
     function videoSearch(key, search, maxResults){

@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <script>
+            let url = new URL(window.location.href);
+            let params = new URLSearchParams(url.search);
+            let songid = params.get('songId');
+
+            console.log(songid);
+            window.location.replace("https://cutormj.github.io/youtubekaraoke/remote.html");
+        </script>
+    </body>
+</html>

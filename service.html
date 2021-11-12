@@ -7,7 +7,7 @@
             console.log(songid);
 // To update JSON file
 
-            fs = require('fs');//Open JSON file from local storage using NodeJS
+            var fs = require('fs');//Open JSON file from local storage using NodeJS
             var name = 'queue.json';
             var m = JSON.parse(fs.readFileSync(name).toString());
             m.forEach(function(p){

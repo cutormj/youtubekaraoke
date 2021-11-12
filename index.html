@@ -1,13 +1,14 @@
 <html>
     <body>
         <script>
-            const fs = require('fs');
-            var name = 'queue.json';
-            var m = JSON.parse(fs.readFileSync(name).toString);
-            m.forEach(function(p){
-                p.name = m.name;
+            const fs = require("fs");
+                fs.readFile("./queue.json", "utf8", (err, jsonString) => {
+                if (err) {
+                    console.log("File read failed:", err);
+                    return;
+                }
+                console.log("File data:", jsonString);
             });
-            console.log(m);
         </script>
     </body>
 </html>

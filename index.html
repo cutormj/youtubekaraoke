@@ -1,7 +1,7 @@
 <html>
     <body>
         <script>
-            var fs = require('fs');
+            const fs = require('fs');
             var name = 'queue.json';
             var m = JSON.parse(fs.readFileSync(name).toString);
             m.forEach(function(p){

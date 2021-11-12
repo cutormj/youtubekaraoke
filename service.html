@@ -4,8 +4,21 @@
             let url = new URL(window.location.href);
             let params = new URLSearchParams(url.search);
             let songid = params.get('songId');
-
             console.log(songid);
+// To update JSON file
+
+            fs = require('fs');//Open JSON file from local storage using NodeJS
+            var name = 'queue.json';
+            var m = JSON.parse(fs.readFileSync(name).toString());
+            m.forEach(function(p){
+                p.name = m.name;
+            });
+
+            const queue_array = JSON.parse(m);// Converting JSON to Array in javaScript
+            queue_array.push(songid); //insert data to array
+            //converting array back to JSON file
+            fs.writeFileSync(name, JSON.stringify(queue_array)); 
+
             window.location.replace("https://cutormj.github.io/youtubekaraoke/remote.html");
         </script>
     </body>

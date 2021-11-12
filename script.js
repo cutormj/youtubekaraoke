@@ -19,7 +19,7 @@ $(document).ready(function(){
                     <li>
                     <a href="#">
                     ${item.snippet.title}
-                    </a><button onclick="saveToQueue()">Send to Queue</button>
+                    </a>
                     </li>
                     `
                 $("#videos").append(video)

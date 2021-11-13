@@ -6,15 +6,26 @@
             let songid = params.get('songId');
             console.log(songid);
 // To update JSON file
+            function readTextFile(file, callback) {
+                var rawFile = new XMLHttpRequest();
+                rawFile.overrideMimeType("application/json");
+                rawFile.open("GET", file, true);
+                rawFile.onreadystatechange = function() {
+                    if (rawFile.readyState === 4 && rawFile.status == "200") {
+                        callback(rawFile.responseText);
+                    }
+                }
+                rawFile.send(null);
+            }
 
-            const fs = require('fs');//Open JSON file from local storage using NodeJS
-            var name = 'queue.json';
-            var m = JSON.parse(fs.readFileSync(name).toString());
-            m.forEach(function(p){
-                p.name = m.name;
+            //usage:
+            readTextFile("./queue.json", function(text){
+                var data = JSON.parse(text);
+                console.log(data);
             });
 
-            const queue_array = JSON.parse(m);// Converting JSON to Array in javaScript
+
+            const queue_array = JSON.parse(null);// Converting JSON to Array in javaScript
             queue_array.push(songid); //insert data to array
             //converting array back to JSON file
             fs.writeFileSync(name, JSON.stringify(queue_array)); 

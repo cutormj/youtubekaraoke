@@ -16,7 +16,7 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a href="#" onclick="send('${item.id.videoId}')">
+                    <a href="https://cutormj.github.io/youtubekaraoke/service.html?songId=${item.id.videoId}">
                     ${item.snippet.title}
                     </a>
                     </li> 
@@ -29,3 +29,4 @@ $(document).ready(function(){
 
 })
 //https://cutormj.github.io/youtubekaraoke/service.html?songId=${item.id.videoId}
+//onclick="send('${item.id.videoId}')

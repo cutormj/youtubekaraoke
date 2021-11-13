@@ -9,6 +9,10 @@ $(document).ready(function(){
     })
 
 
+    function pop(){
+        alert("Hello This is pop");
+    }
+    
 
     function videoSearch(key, search, maxResults){
 
@@ -29,8 +33,4 @@ $(document).ready(function(){
 
     }
 
-    function pop(){
-        alert("Hello This is pop");
-    }
-    
 })

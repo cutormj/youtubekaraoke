@@ -8,7 +8,7 @@ $(document).ready(function(){
         videoSearch(API_KEY, search, 10)
     })
 
-
+    alert("Hello This is pop");
     function pop(){
         alert("Hello This is pop");
     }
@@ -25,7 +25,7 @@ $(document).ready(function(){
                     <a href="#" onclick="pop()">
                     ${item.snippet.title}
                     </a>
-                    </li>
+                    </li> 
                     `
                 $("#videos").append(video)
             });

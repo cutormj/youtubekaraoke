@@ -9,9 +9,6 @@ $(document).ready(function(){
     })
 
     alert("Hello This is pop");
-    function pop(){
-        alert("Hello This is pop");
-    }
     
 
     function videoSearch(key, search, maxResults){

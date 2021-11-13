@@ -1,6 +1,4 @@
-<html>
-    <body>
-        <script>
+
             let url = new URL(window.location.href);
             let params = new URLSearchParams(url.search);
             let songid = params.get('songId');
@@ -37,7 +35,3 @@
                 // In case of a error throw err. 
                 if (err) throw err; 
             }) 
-
-        </script>
-    </body>
-</html>

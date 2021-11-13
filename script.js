@@ -22,7 +22,7 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a onclick="pop()" href="https://cutormj.github.io/youtubekaraoke/service.html?songId=${item.id.videoId}">
+                    <a href="#" onclick="pop()">
                     ${item.snippet.title}
                     </a>
                     </li>
@@ -34,3 +34,4 @@ $(document).ready(function(){
     }
 
 })
+//https://cutormj.github.io/youtubekaraoke/service.html?songId=${item.id.videoId}

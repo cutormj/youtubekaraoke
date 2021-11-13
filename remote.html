@@ -37,8 +37,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="script.js"></script>
 <script>
-    function pop(){
-        alert("Hello This is pop");
+    function send(videoId){
+            var HttpClient = function() {
+            this.get = function(aUrl, aCallback) {
+                var anHttpRequest = new XMLHttpRequest();
+                anHttpRequest.onreadystatechange = function() { 
+                    if (anHttpRequest.readyState == 4 && anHttpRequest.status == 200)
+                        aCallback(anHttpRequest.responseText);
+                }
+
+                anHttpRequest.open( "GET", aUrl, true );            
+                anHttpRequest.send( null );
+            }
+        }
+                var client = new HttpClient();
+        client.get('https://cutormj.github.io/youtubekaraoke/service.html?songId=' + videoId, function(response) {
+            // do something with response
+            alert("get request sent");
+        });
     }
 </script>
 </html>

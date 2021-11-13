@@ -8,9 +8,6 @@ $(document).ready(function(){
         videoSearch(API_KEY, search, 10)
     })
 
-    alert("Hello This is pop");
-    
-
     function videoSearch(key, search, maxResults){
 
         $.get("https://www.googleapis.com/youtube/v3/search?key="+ key 
@@ -19,7 +16,7 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a href="#" onclick="pop()">
+                    <a href="#" onclick="send(${item.id.videoId})">
                     ${item.snippet.title}
                     </a>
                     </li> 

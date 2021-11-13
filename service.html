@@ -25,7 +25,8 @@
             });
 
 
-            const queue_array = JSON.parse(null);// Converting JSON to Array in javaScript
+
+            const queue_array = JSON.parse(data);// Converting JSON to Array in javaScript
             queue_array.push(songid); //insert data to array
             //converting array back to JSON file
             fs.writeFileSync(name, JSON.stringify(queue_array)); 

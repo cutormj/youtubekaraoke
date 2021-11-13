@@ -16,7 +16,7 @@ $(document).ready(function(){
             data.items.forEach(item => {
                 video = `
                     <li>
-                    <a href="#" onclick="send(${item.id.videoId})">
+                    <a href="#" onclick="send('${item.id.videoId}')">
                     ${item.snippet.title}
                     </a>
                     </li> 
